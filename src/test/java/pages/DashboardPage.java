@@ -24,5 +24,6 @@ public class DashboardPage {
 	@FindBy (xpath = "//p[text()='Logged in successfully.']")
 	public WebElement loggedInSuccess_message;
 
-
+	@FindBy (xpath = "//h6[text()=' Sales & Expenses']")
+	public WebElement dashoboard_salesexpenses_header;
 }
