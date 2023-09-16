@@ -23,4 +23,22 @@ public class dashboardManagement_steps {
 		
 		Driver.quitDriver();
 	}
+	
+//	@dashboardButtons -start
+	@Then("I should see the buttons {string},{string}, {string} and {string}")
+	public void i_should_see_the_buttons_and(String amountdue, String customers, String invoices, String estimates) {
+		if(dashPage.dashoboard_amountdue_button.getText().contains(amountdue)) {
+			Assert.assertTrue(true);
+		}
+		if(dashPage.dashoboard_customers_button.getText().contains(customers)) {
+			Assert.assertTrue(true);
+		}
+		if(dashPage.dashoboard_invoices_button.getText().contains(invoices)) {
+			Assert.assertTrue(true);
+		}
+		if(dashPage.dashoboard_estimates_button.getText().contains(estimates)) {
+			Assert.assertTrue(true);
+		}
+		Driver.quitDriver();
+	}
 }
