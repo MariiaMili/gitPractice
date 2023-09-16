@@ -45,4 +45,17 @@ public class DashboardPage {
 	@FindBy (xpath = "//h6[text()='Recent Estimates']")
 	public WebElement dashoboard_recentestimates_header;
 	
+	@FindBy (xpath = "//canvas[@id='graph']")
+	public WebElement dashoboard_graph;
+	
+	@FindBy (xpath = "//div[@class='p-0 relative mx-auto w-full flex items-center justify-end box-border cursor-pointer border border-gray-200 rounded-md bg-white text-sm leading-snug outline-none max-h-10']")
+	public WebElement dashoboard_year_dropdown;
+	
+	@FindBy (xpath = "//span[text()='This year']")
+	public WebElement dashoboard_thisyear_dropdown_option;
+	
+	@FindBy (xpath = "//span[text()='Previous year']")
+	public WebElement dashoboard_previousyear_dropdown_option;
+	
+	
 }
