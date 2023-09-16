@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		            //the whole feature file 
 		            //and finds unimplemented files
 		            //if false- turns off
-		tags="@DashboardButtons"
+		tags="@DashboardHeaders"
 		)
 public class DryRunner {
 
