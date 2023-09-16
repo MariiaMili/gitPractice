@@ -12,3 +12,8 @@ Feature: Dashboard home page
   Scenario: As a user when I log in, I should be on the dashboard page and see four buttons
     Then I should be on the Dashboard home page
     And I should see the buttons "Amount Due","Customers", "Invoices" and "Estimates"
+
+  @DashboardHeaders
+  Scenario: As a user when I log in, I should be on the dashboard page and see two headers
+    Then I should be on the Dashboard home page
+    And I should see the headers "Due Invoices" and "Recent Estimates"

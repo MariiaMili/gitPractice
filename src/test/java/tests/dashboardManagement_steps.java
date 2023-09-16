@@ -20,25 +20,40 @@ public class dashboardManagement_steps {
 	public void i_should_see_the_header(String string) {
 		utils.waitForElementToBeVisible(dashPage.dashoboard_salesexpenses_header);
 		Assert.assertTrue(dashPage.dashoboard_salesexpenses_header.isDisplayed());
-		
+
 		Driver.quitDriver();
 	}
-	
+
 //	@dashboardButtons -start
 	@Then("I should see the buttons {string},{string}, {string} and {string}")
 	public void i_should_see_the_buttons_and(String amountdue, String customers, String invoices, String estimates) {
-		if(dashPage.dashoboard_amountdue_button.getText().contains(amountdue)) {
+		if (dashPage.dashoboard_amountdue_button.getText().contains(amountdue)) {
 			Assert.assertTrue(true);
 		}
-		if(dashPage.dashoboard_customers_button.getText().contains(customers)) {
+		if (dashPage.dashoboard_customers_button.getText().contains(customers)) {
 			Assert.assertTrue(true);
 		}
-		if(dashPage.dashoboard_invoices_button.getText().contains(invoices)) {
+		if (dashPage.dashoboard_invoices_button.getText().contains(invoices)) {
 			Assert.assertTrue(true);
 		}
-		if(dashPage.dashoboard_estimates_button.getText().contains(estimates)) {
+		if (dashPage.dashoboard_estimates_button.getText().contains(estimates)) {
 			Assert.assertTrue(true);
 		}
 		Driver.quitDriver();
+	}
+
+//	 @DashboardHeaders - start
+	@Then("I should see the headers {string} and {string}")
+	public void i_should_see_the_headers_and(String dueinvoices, String recentestimates) {
+		if (dashPage.dashoboard_dueinvoices_header.getText().contains(dueinvoices)) {
+			Assert.assertTrue(true);
+			System.out.println("The header Due Invoices is displayed");
+		}
+		if (dashPage.dashoboard_recentestimates_header.getText().contains(recentestimates)) {
+			Assert.assertTrue(true);
+			System.out.println("The header Recent Estimates is displayed");
+		}
+		Driver.quitDriver();
+
 	}
 }

@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 				"json:Cucumber_reports/cucumber_report.lason"},
 		features="./src/test/resources/features", //location of the feature files
 		glue="tests",//location of step definitions
-		tags="@DashboardButtons"
+		tags="@DashboardHeaders"
 		)
 public class TestRunner {
 

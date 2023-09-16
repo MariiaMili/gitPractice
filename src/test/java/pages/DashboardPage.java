@@ -38,4 +38,11 @@ public class DashboardPage {
 	
 	@FindBy (xpath = "//span[text()='Estimates']")
 	public WebElement dashoboard_estimates_button;
+	
+	@FindBy (xpath = "//h6[text()='Due Invoices']")
+	public WebElement dashoboard_dueinvoices_header;
+	
+	@FindBy (xpath = "//h6[text()='Recent Estimates']")
+	public WebElement dashoboard_recentestimates_header;
+	
 }
