@@ -17,3 +17,8 @@ Feature: Dashboard home page
   Scenario: As a user when I log in, I should be on the dashboard page and see two headers
     Then I should be on the Dashboard home page
     And I should see the headers "Due Invoices" and "Recent Estimates"
+
+  @DashboardGraph
+  Scenario: As a user when I log in, I should be on the dashboard page and see the graph with a dropdown menu
+    Then I should be on the Dashboard home page
+    And I should see the graph and a dropdown menu having options "This year" and "Previous year"
