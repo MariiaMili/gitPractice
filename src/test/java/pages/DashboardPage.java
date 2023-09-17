@@ -56,6 +56,5 @@ public class DashboardPage {
 	
 	@FindBy (xpath = "//span[text()='Previous year']")
 	public WebElement dashoboard_previousyear_dropdown_option;
-	
-	
+
 }

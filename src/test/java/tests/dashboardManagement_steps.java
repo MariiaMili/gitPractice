@@ -2,14 +2,17 @@ package tests;
 
 import org.junit.Assert;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.DashboardPage;
+import pages.PaymentPage;
 import utils.BrowserUtils;
 import utils.Driver;
 
 public class dashboardManagement_steps {
 	BrowserUtils utils = new BrowserUtils();
 	DashboardPage dashPage = new DashboardPage();
+	PaymentPage paymentsPage = new PaymentPage();
 
 	@Then("I should be on the Dashboard home page")
 	public void i_should_be_on_the_dashboard_home_page() {
@@ -70,4 +73,19 @@ public class dashboardManagement_steps {
 
 		Driver.quitDriver();
 	}
+
+//	  @PaymentManagement - start
+	@Given("I navigate to Payments tab")
+	public void i_navigate_to_payments_tab() {
+		utils.waitForElementToBeVisible(paymentsPage.payments_link);
+		paymentsPage.payments_link.click();
+	}
+
+	@Then("I should see {string} button")
+	public void i_should_see_button(String addpayment) {
+		utils.waitForElementToBeVisible(paymentsPage.payments_payment_header);
+		Assert.assertTrue(paymentsPage.payments_addpayment_button.isDisplayed());
+		Assert.assertEquals(addpayment, paymentsPage.payments_addpayment_button.getText());
+	}
+
 }
