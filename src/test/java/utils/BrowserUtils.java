@@ -15,7 +15,7 @@ public class BrowserUtils {
 
 	WebDriverWait wait;
 	Actions act;
-	int delay =7;
+	int delay =10;
 
 	public void waitUntilElementVisibleWithLocator(By locator) {
 		wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(delay));
