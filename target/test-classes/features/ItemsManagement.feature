@@ -1,3 +1,4 @@
+@Regression
 Feature: Items Management;
 
   Background: 
@@ -5,7 +6,7 @@ Feature: Items Management;
 
   # In background we put the first one or few given steps that are exactly same
   # that are used by each scenarios so that we don't have to redeclare that given step in each scenario
-  @createItem
+  @createItem @smokeTest
   Scenario: As a user, I am able to create an item or a service
     And I navigate to Items tab
     When I click on the Add Item button

@@ -1,3 +1,4 @@
+@Regression
 Feature: Dashboard home page
 
   Background: 
@@ -8,7 +9,7 @@ Feature: Dashboard home page
     Then I should be on the Dashboard home page
     And I should see the header "Sales & Expenses"
 
-  @DashboardButtons
+  @DashboardButtons @smokeTest
   Scenario: As a user when I log in, I should be on the dashboard page and see four buttons
     Then I should be on the Dashboard home page
     And I should see the buttons "Amount Due","Customers", "Invoices" and "Estimates"
