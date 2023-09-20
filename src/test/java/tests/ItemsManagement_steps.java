@@ -56,7 +56,7 @@ public class ItemsManagement_steps {
 		Assert.assertTrue(item_page.items_page_item_headerText.isDisplayed());
 	}
 
-	@When("I click on the Add Item button")
+	@When("I click on the AddItem button")
 	public void i_click_on_the_add_item_button() {
 		item_page.items_page_addItem_btn.click();
 	}
