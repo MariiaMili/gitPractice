@@ -25,7 +25,7 @@ public class Driver {
 					case "chrome-headless" :
 					    chromeOptions = new ChromeOptions();
 						chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-						chromeOptions.addArguments("--headless");
+						chromeOptions.addArguments("--headless","--disable-gpu", "--window-size=1920,1080");
 						driver = new ChromeDriver(chromeOptions);
 						break;
 					case "chrome" :

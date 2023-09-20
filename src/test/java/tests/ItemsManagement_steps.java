@@ -27,13 +27,13 @@ public class ItemsManagement_steps {
 	@Before
 	public void openWebDriverBeforeTest() {
 		Driver.getDriver().get(TestDataReader.getProperty("appurl"));
-		Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
-		Driver.getDriver().manage().window().maximize();
+//		Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+//		Driver.getDriver().manage().window().maximize();
 	}
 	
 	@After()
 	public void closeWebDriverAfterTest() {
-		Driver.quitDriver();
+//		Driver.quitDriver();
 	}
 
 	@Given("As an entity user, I am logged in")
@@ -101,6 +101,7 @@ public class ItemsManagement_steps {
 
 	@Then("I delete the item")
 	public void i_delete_the_item() throws InterruptedException {
+		Thread.sleep(2000);
 		utils.waitForElementToBeVisible(item_page.items_page_3dot_menu);
 		item_page.items_page_3dot_menu.click();
 		utils.waitForElementToBeVisible(item_page.items_page_3dot_delete_option);
@@ -110,14 +111,13 @@ public class ItemsManagement_steps {
 		item_page.items_page_delete_ok_btn.click();
 //		utils.waitForElementToBeVisible(item_page.items_Input_noResultFound_text);
 //		Assert.assertTrue(item_page.items_Input_noResultFound_text.isDisplayed());
-		Thread.sleep(2000);
 
 //		utils.waitForElementToBeVisible(item_page.items_Input_noResultFound_text);
 //		Assert.assertTrue(item_page.items_Input_noResultFound_text.isDisplayed());
+		Thread.sleep(2000);
 		Assert.assertTrue(
 				Driver.getDriver().findElements(By.xpath("//a[contains(text(), '" + itemName + "')]")).isEmpty());
 
-		Driver.quitDriver();
 	}
 
 	// edit item - start
@@ -162,7 +162,6 @@ public class ItemsManagement_steps {
 		// get the price of the item and validate
 
 		String trimmedPrice = newPrice.substring(0, 2);
-		System.out.println(trimmedPrice);
 		Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[contains(text(), '" + trimmedPrice + "')]"))
 				.isDisplayed());
 	}
